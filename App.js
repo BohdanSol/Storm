@@ -1,25 +1,47 @@
-import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import 'react-native-gesture-handler';
 
-const App = () => {
+// AuthStack
+import Onboarding from './screens/AuthStack/Onboarding';
+import Login from './screens/AuthStack/Login';
+import Register from './screens/AuthStack/Register';
+import ForgotPassword from './screens/AuthStack/ForgotPassword';
+
+const Stack = createStackNavigator();
+
+const AuthStack = () => {
   return (
-    <>
-      <View style={styles.sectionContainer}>
-        <Text style={styles.sectionTitle}>Step One</Text>
-      </View>
-    </>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false
+      }}
+    >
+      <Stack.Screen
+        name="Onboarding"
+        component={Onboarding}
+      />
+      <Stack.Screen
+        name="Login"
+        component={Login}
+      />
+      <Stack.Screen
+        name="Register"
+        component={Register}
+      />
+      <Stack.Screen
+        name="ForgotPassword"
+        component={ForgotPassword}
+      />
+    </Stack.Navigator>
   );
 };
-
-const styles = StyleSheet.create({
-
-});
-
+const App = () => {
+  return (
+    <NavigationContainer>
+      <AuthStack />
+    </NavigationContainer>
+  );
+}
 export default App;
