@@ -46,6 +46,7 @@ const Onboarding = ({ navigation }) => {
                 <TouchableOpacity
                     activeOpacity={0.5}
                     style={styles.btnOutlined}
+                    onPress={() => { navigation.navigate('Login') }}
                 >
                     <Text style={[styles.btnText, { color: '#212121' }]}>Вхід</Text>
                 </TouchableOpacity>
