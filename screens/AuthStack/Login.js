@@ -71,8 +71,9 @@ const Login = ({ navigation }) => {
                 <TouchableOpacity
                     activeOpacity={0.5}
                     style={styles.btnWhite}
+                    onPress={() => navigation.navigate('Register')}
                 >
-                    <Text style={[styles.btnText, { color: '#212121' }]}>Забули пароль?</Text>
+                    <Text style={[styles.btnText, { color: '#212121' }]}>Немає аккаунту? Зареєструватись</Text>
                 </TouchableOpacity>
             </View>
         </View>

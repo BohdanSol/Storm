@@ -40,6 +40,7 @@ const Onboarding = ({ navigation }) => {
                 <TouchableOpacity
                     activeOpacity={0.5}
                     style={styles.btnGray}
+                    onPress={() => navigation.replace('MainStack')}
                 >
                     <Text style={[styles.btnText, { color: '#212121' }]}>Продовжити як гість</Text>
                 </TouchableOpacity>
@@ -53,6 +54,7 @@ const Onboarding = ({ navigation }) => {
                 <TouchableOpacity
                     activeOpacity={0.5}
                     style={styles.btnBlack}
+                    onPress={() => { navigation.navigate('Register') }}
                 >
                     <Text style={[styles.btnText, { color: '#fff' }]}>Реєстрація</Text>
                 </TouchableOpacity>
