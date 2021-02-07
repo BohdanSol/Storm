@@ -6,12 +6,15 @@ import Swiper from 'react-native-swiper';
 import Logo from '../../assets/logo.svg';
 import EmailIcon from '../../assets/icons/email.svg';
 import PasswordIcon from '../../assets/icons/password.svg';
-import EyeClosed from '../../assets/icons/eye.svg';
+import EyeIcon from '../../assets/icons/eye.svg';
 import EyeClosedIcon from '../../assets/icons/eyeClosed.svg';
 import FacebookIcon from '../../assets/icons/facebook.svg';
 import GoogleIcon from '../../assets/icons/google.svg';
 
 const Login = ({ navigation }) => {
+    const [login, setLogin] = useState(null);
+    const [password, setPassword] = useState(null);
+    const [securePassInput, setSecurePassInput] = useState(true);
     return (
         <View style={{ flex: 1, backgroundColor: '#fff' }}>
             <View style={styles.absoluteLogoContainer}>
@@ -37,7 +40,14 @@ const Login = ({ navigation }) => {
                         placeholder={'Пароль'}
                         placeholderTextColor={'#7c7c7c'}
                         style={styles.input}
+                        secureTextEntry={securePassInput}
                     />
+                    <TouchableOpacity
+                        onPress={() => { setSecurePassInput(!securePassInput) }}
+                        style={styles.secureTextEntry}
+                    >
+                        {securePassInput ? <EyeClosedIcon /> : <EyeIcon />}
+                    </TouchableOpacity>
                 </View>
             </View>
             <View>
@@ -80,6 +90,13 @@ const Login = ({ navigation }) => {
     );
 }
 const styles = StyleSheet.create({
+    secureTextEntry: {
+        height: 48,
+        width: 48,
+        justifyContent: 'center',
+        alignItems: 'center',
+        right: 36
+    },
     socialBtn: {
         height: 48,
         flex: 1,
