@@ -30,6 +30,7 @@ const Login = ({ navigation }) => {
                         placeholder={'Email'}
                         placeholderTextColor={'#7c7c7c'}
                         style={styles.input}
+                        onChangeText={(text) => setLogin(text)}
                     />
                 </View>
                 <View style={styles.inputContainer}>
@@ -41,6 +42,7 @@ const Login = ({ navigation }) => {
                         placeholderTextColor={'#7c7c7c'}
                         style={styles.input}
                         secureTextEntry={securePassInput}
+                        onChangeText={(text) => setPassword(text)}
                     />
                     <TouchableOpacity
                         onPress={() => { setSecurePassInput(!securePassInput) }}

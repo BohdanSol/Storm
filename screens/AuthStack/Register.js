@@ -14,7 +14,9 @@ import FacebookIcon from '../../assets/icons/facebook.svg';
 import GoogleIcon from '../../assets/icons/google.svg';
 
 const Register = ({ navigation }) => {
-    const [login, setLogin] = useState(null);
+    const [pib, setPib] = useState(null);
+    const [email, setEmail] = useState(null);
+    const [number, setNumber] = useState('+380');
     const [password, setPassword] = useState(null);
     const [securePassInput, setSecurePassInput] = useState(true);
     return (
@@ -32,6 +34,7 @@ const Register = ({ navigation }) => {
                         placeholder={'ПІБ'}
                         placeholderTextColor={'#7c7c7c'}
                         style={styles.input}
+                        onChangeText={(text) => setPib(text)}
                     />
                 </View>
                 <View style={styles.inputContainer}>
@@ -39,9 +42,11 @@ const Register = ({ navigation }) => {
                         <PhoneIcon />
                     </View>
                     <TextInput
-                        placeholder={'+380'}
+                        value={number}
                         placeholderTextColor={'#7c7c7c'}
                         style={styles.input}
+                        keyboardType={'number-pad'}
+                        onChangeText={(text) => setNumber(text)}
                     />
                 </View>
                 <View style={styles.inputContainer}>
@@ -52,6 +57,7 @@ const Register = ({ navigation }) => {
                         placeholder={'Email'}
                         placeholderTextColor={'#7c7c7c'}
                         style={styles.input}
+                        onChangeText={(text) => setEmail(text)}
                     />
                 </View>
                 <View style={styles.inputContainer}>
@@ -63,6 +69,7 @@ const Register = ({ navigation }) => {
                         placeholderTextColor={'#7c7c7c'}
                         style={styles.input}
                         secureTextEntry={securePassInput}
+                        onChangeText={(text) => setPassword(text)}
                     />
                     <TouchableOpacity
                         onPress={() => { setSecurePassInput(!securePassInput) }}
