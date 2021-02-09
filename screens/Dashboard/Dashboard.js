@@ -4,6 +4,7 @@ const { height, width } = Dimensions.get('window');
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import Header from './components/Header';
 import Categories from './components/Categories';
+import BannerCarousel from './components/BannerCarousel';
 
 const Dashboard = ({ navigation }) => {
     return (
@@ -11,6 +12,7 @@ const Dashboard = ({ navigation }) => {
             <Header />
             <ScrollView style={{ flex: 1 }}>
                 <Categories />
+                <BannerCarousel />
                 <Text>Dashboard</Text>
             </ScrollView>
         </View>

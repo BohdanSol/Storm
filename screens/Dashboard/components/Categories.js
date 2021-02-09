@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, Dimensions, TouchableOpacity, Image, Touchable 
 const { height, width } = Dimensions.get('window');
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 
-const Header = ({ navigation }) => {
+const Categories = ({ navigation }) => {
     return (
         <View style={styles.categoriesContainer}>
             <TouchableOpacity
@@ -70,4 +70,4 @@ const styles = StyleSheet.create({
         fontSize: 16
     }
 });
-export default Header;
+export default Categories;
