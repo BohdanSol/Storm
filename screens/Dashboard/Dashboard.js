@@ -5,6 +5,7 @@ import { getStatusBarHeight } from 'react-native-status-bar-height';
 import Header from './components/Header';
 import Categories from './components/Categories';
 import BannerCarousel from './components/BannerCarousel';
+import SalesList from './components/SalesList';
 
 const Dashboard = ({ navigation }) => {
     return (
@@ -13,7 +14,7 @@ const Dashboard = ({ navigation }) => {
             <ScrollView style={{ flex: 1 }}>
                 <Categories />
                 <BannerCarousel />
-                <Text>Dashboard</Text>
+                <SalesList />
             </ScrollView>
         </View>
     );
