@@ -9,6 +9,7 @@ const Categories = ({ navigation }) => {
             <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.categoryContainer}
+                onPress={() => navigation.navigate('Category', { headerTitle: 'Чоловікам' })}
             >
                 <Image
                     source={{ uri: 'https://p1.pxfuel.com/preview/845/791/783/sensolatino-sunglasses-italia-man.jpg' }}
@@ -21,6 +22,7 @@ const Categories = ({ navigation }) => {
             <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.categoryContainer}
+                onPress={() => navigation.navigate('Category', { headerTitle: 'Жінкам' })}
             >
                 <Image
                     source={{ uri: 'https://media.istockphoto.com/photos/beautiful-and-happy-portrait-of-cute-indian-style-girl-with-tikka-on-picture-id1204479466' }}
@@ -33,6 +35,7 @@ const Categories = ({ navigation }) => {
             <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.categoryContainer}
+                onPress={() => navigation.navigate('Category', { headerTitle: 'Дітям' })}
             >
                 <Image
                     source={{ uri: 'https://hips.hearstapps.com/hmg-prod/images/easy-kids-hairstyles-headband-1587407210.jpg?crop=0.653xw:0.871xh;0.168xw,0.118xh&resize=480:*' }}

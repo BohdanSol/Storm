@@ -12,6 +12,7 @@ import ForgotPassword from './screens/AuthStack/ForgotPassword';
 
 // DashboardStack
 import Dashboard from './screens/Dashboard/Dashboard';
+import Category from './screens/Dashboard/Category';
 
 // SearchStack
 import Search from './screens/Search/Search';
@@ -66,6 +67,7 @@ function DashboardStack() {
       }}
     >
       <Stack.Screen name="Dashboard" component={Dashboard} />
+      <Stack.Screen name="Category" component={Category} />
     </Stack.Navigator>
   );
 }

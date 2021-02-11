@@ -2,19 +2,15 @@ import React, { useState, useRef, useEffect } from 'react';
 import { StyleSheet, View, Text, Dimensions, ScrollView } from 'react-native';
 const { height, width } = Dimensions.get('window');
 import { getStatusBarHeight } from 'react-native-status-bar-height';
-import Header from './components/Header';
-import Categories from './components/Categories';
-import BannerCarousel from './components/BannerCarousel';
-import SalesList from './components/SalesList';
+import TitledHeader from './components/TitledHeader';
+import Collections from './components/Collections';
 
-const Dashboard = ({ navigation }) => {
+const Collection = ({ route, navigation }) => {
     return (
         <View style={{ flex: 1, backgroundColor: '#fff' }}>
-            <Header />
+            <TitledHeader title={route.params.headerTitle} navigation={navigation} />
             <ScrollView style={{ flex: 1 }}>
-                <Categories navigation={navigation} />
-                <BannerCarousel />
-                <SalesList />
+                <Collections filter={route.params.headerTitle} />
             </ScrollView>
         </View>
     );
@@ -22,4 +18,4 @@ const Dashboard = ({ navigation }) => {
 const styles = StyleSheet.create({
 
 });
-export default Dashboard;
+export default Collection;
