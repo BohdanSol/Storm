@@ -68,7 +68,7 @@ const data = [
 ];
 const Collections = ({ filter, navigation }) => {
     return (
-        <View style={{ flex: 1, marginTop: 20 }}>
+        <View style={{ flex: 1, marginTop: 30 }}>
             {
                 data.map(element => {
                     if (filter === element.filter) {
