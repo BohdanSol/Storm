@@ -12,7 +12,7 @@ const Collection = ({ route, navigation }) => {
             <TitledHeader title={route.params.headerTitle} navigation={navigation} />
             <ScrollView style={{ flex: 1 }}>
                 <BannerCarousel />
-                <Collections filter={route.params.headerTitle} />
+                <Collections filter={route.params.headerTitle} navigation={navigation} />
             </ScrollView>
         </View>
     );

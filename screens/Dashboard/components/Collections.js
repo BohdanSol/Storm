@@ -76,6 +76,7 @@ const Collections = ({ filter, navigation }) => {
                             <TouchableOpacity
                                 key={element.id.toString()}
                                 activeOpacity={0.8}
+                                onPress={() => navigation.navigate('Goods', { headerTitle: element.title })}
                             >
                                 <Image
                                     source={{ uri: element.image_uri }}
